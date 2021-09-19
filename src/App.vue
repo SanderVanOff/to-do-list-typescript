@@ -31,7 +31,7 @@ export default class App extends Vue {
     {
       index: '1',
       title: "Список задач",
-      routeName: "Home"
+      routeName: "TaskLIst"
     },
 
     {

@@ -34,7 +34,12 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import {tasksModule} from "@/store"
+
+//components
 import VContainer from "@/components/v-container.vue";
+
+//types
 import Task from "@/types/Task";
 
 @Component({
@@ -53,6 +58,8 @@ export default class CreateTask extends Vue {
           description: this.form.description,
           status: 'created'
       }
+
+      tasksModule.dispatch('addNewTast', newTask)
     console.log('newTask',  newTask)
   }
 }

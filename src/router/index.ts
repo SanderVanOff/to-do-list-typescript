@@ -11,6 +11,11 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
+    path: '/task-list',
+    name: 'TaskLIst',
+    component: ()=> import('../views/TaskList.vue')
+  },
+  {
     name: 'CreateTask',
     path: '/create-task',
     component: ()=> import('../views/CreateTask.vue')
